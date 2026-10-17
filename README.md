@@ -5,6 +5,15 @@
 The web dashboard for [homeCore](https://github.com/homeCore-io/homeCore) —
 a Flutter application targeting the browser, shipped as its own nginx image.
 
+> **Frozen for administration.** Running the house — rooms, devices, rules,
+> plugins, people, backups — has moved to
+> [hc-web-svelte](https://github.com/homeCore-io/hc-web-svelte), which the
+> [docker stack](https://github.com/homeCore-io/docker) serves on port 3000.
+> This app stays, on port 3001, for one thing: **hand-built dashboard pages**,
+> until hc-web-svelte has its own. It gets fixes, not features. What it still
+> does that the new app doesn't is listed in hc-web-svelte's
+> `docs/design/10-cut-over.md`.
+
 It is not built into core. Core serves the API; this container serves the app
 **and** reverse-proxies `/api/v1/*` to core.
 
