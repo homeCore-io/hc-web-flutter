@@ -21,6 +21,7 @@ class UserEntry {
   String get displayRole => switch (role) {
         'admin' => 'Admin',
         'user' => 'User',
+        'household_member' => 'Household Member',
         'read_only' => 'Read Only',
         'observer' => 'Observer',
         'device_operator' => 'Device Operator',
@@ -29,11 +30,12 @@ class UserEntry {
         _ => role,
       };
 
-  /// The 7 roles the backend defines, in decreasing privilege — the full ladder
+  /// The 8 roles the backend defines, in decreasing privilege — the full ladder
   /// the picker offers, not the 3 the UI once hardcoded.
   static const roles = <String>[
     'admin',
     'user',
+    'household_member',
     'read_only',
     'observer',
     'device_operator',
@@ -44,6 +46,7 @@ class UserEntry {
   static String displayRoleOf(String role) => switch (role) {
         'admin' => 'Admin',
         'user' => 'User',
+        'household_member' => 'Household Member',
         'read_only' => 'Read Only',
         'observer' => 'Observer',
         'device_operator' => 'Device Operator',

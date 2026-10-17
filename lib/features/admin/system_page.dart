@@ -203,6 +203,7 @@ class _SystemPageState extends ConsumerState<SystemPage> {
   String _displayRole(String role) => switch (role) {
         'admin' => 'Admin',
         'user' => 'User',
+        'household_member' => 'Household Member',
         'read_only' => 'Read Only',
         'observer' => 'Observer',
         'device_operator' => 'Device Operator',
